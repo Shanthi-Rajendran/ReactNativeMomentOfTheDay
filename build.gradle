@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies { classpath "com.android.tools.build:gradle:7.0.4" }
+}
+
+plugins {
+    id 'com.android.library' version '7.1.0' apply true
+}
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+     implementation 'com.facebook.react:react-native:+'
+}
